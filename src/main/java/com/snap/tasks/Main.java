@@ -23,6 +23,7 @@ public class Main {
         }
 
         Greeting greeting = new Greeting();
-        log.info(greeting.say(LocalTime.now(), Locale.getDefault()));
+//        log.info(greeting.say(LocalTime.now(), Locale.getDefault()));
+        System.out.println(Locale.forLanguageTag("ru"));
     }
 }

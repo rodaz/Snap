@@ -45,7 +45,7 @@ public class GreetingTest {
 
     @Test
     public void shouldGreetingMorningRus() throws Exception {
-        message = greeting.say(LocalTime.of(6,0), Locale.getDefault());
+        message = greeting.say(LocalTime.of(6,0), Locale.forLanguageTag("ru"));
         assertThat(message, is("Доброе утро, мир!"));
     }
 
@@ -57,7 +57,7 @@ public class GreetingTest {
 
     @Test
     public void shouldGreetingEveningRus() throws Exception {
-        message = greeting.say(LocalTime.of(19,0), Locale.forLanguageTag("ru"));
+        message = greeting.say(LocalTime.of(19,0), Locale.forLanguageTag("uk"));
         assertThat(message, is("Добрый вечер, мир!"));
     }
 
