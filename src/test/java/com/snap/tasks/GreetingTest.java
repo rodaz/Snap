@@ -45,25 +45,25 @@ public class GreetingTest {
 
     @Test
     public void shouldGreetingMorningRus() throws Exception {
-        message = greeting.say(LocalTime.of(6,0), Locale.getDefault());
+        message = greeting.say(LocalTime.of(6,0), Locale.forLanguageTag("ru"));
         assertThat(message, is("Доброе утро, мир!"));
     }
 
     @Test
     public void shouldGreetingDayRus() throws Exception {
-        message = greeting.say(LocalTime.of(12,0), Locale.getDefault());
+        message = greeting.say(LocalTime.of(12,0), Locale.forLanguageTag("ru"));
         assertThat(message, is("Добрый день, мир!"));
     }
 
     @Test
     public void shouldGreetingEveningRus() throws Exception {
-        message = greeting.say(LocalTime.of(19,0), Locale.getDefault());
+        message = greeting.say(LocalTime.of(19,0), Locale.forLanguageTag("ru"));
         assertThat(message, is("Добрый вечер, мир!"));
     }
 
     @Test
     public void shouldGreetingNightRus() throws Exception {
-        message = greeting.say(LocalTime.of(1,0), Locale.getDefault());
+        message = greeting.say(LocalTime.of(1,0), Locale.forLanguageTag("ru"));
         assertThat(message, is("Доброй ночи, мир!"));
     }
 }
